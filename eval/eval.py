@@ -1,5 +1,3 @@
-import torch
-
 from model.HotDogModel import HotDogModel
 from utils.utils import load_model_dict, load_model_dict_abs
 
