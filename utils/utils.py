@@ -1,7 +1,7 @@
 from pathlib import Path
 import torch
 import os
-import cv2
+
 
 
 def save_dict(params, name, dirname=None):
@@ -20,7 +20,7 @@ def save_dict(params, name, dirname=None):
 
 
 def load_model_dict_abs(abs_path):
-    state_dict = torch.load(path)
+    state_dict = torch.load(abs_path)
     return state_dict
 
 
