@@ -1,8 +1,9 @@
 import torch
 import cv2
 from PIL import Image
-from torch.utils.data import DataLoader,Dataset
+from torch.utils.data import DataLoader, Dataset
 import torchvision.transforms as transforms
+
 
 class ImageNetDataset(Dataset):
     def __init__(self, paths, augmentations=None):
