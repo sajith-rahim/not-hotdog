@@ -17,6 +17,7 @@ class Trainer:
 
     def load_dataset(self):
         self.train_ds = ImageNetDataset(self.train_path)
+        # print(len(self.train_ds))
 
     def train(self, n_epochs=None):
         n_epochs = 33 if n_epochs is None else n_epochs
@@ -47,4 +48,5 @@ class Trainer:
                 epoch_loss[idx] = _loss.item()
                 print(f"[Epoch:{epoch}] {idx} >> Loss: {_loss.item()}")
             print(f"<{self.device}>[Epoch:{epoch}] >> Loss: {torch.tensor(list(epoch_loss.values())).mean()}")
-            save_dict(self.model.state_dict(), 'model_' + str(epoch))
+            if epoch%10 == 0:
+                save_dict(self.model.state_dict(), 'model_' + str(epoch))

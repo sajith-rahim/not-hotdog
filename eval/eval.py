@@ -22,3 +22,6 @@ class HotDogNotHotDogInfer:
     def infer(self, query):
         y = self.model(query)
         return y
+    
+    def set_device(self,device):
+        self.model = self.model.to(device)
