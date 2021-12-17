@@ -32,7 +32,7 @@ class ImageNetDataset(Dataset):
             augmented = transforms_(img=image)
             image = augmented
 
-        print(image.shape)
+        #print(image.shape)
         return image, torch.tensor(label, dtype=torch.float32)
 
     def __len__(self):
