@@ -15,7 +15,7 @@ class ImageNetDataset(Dataset):
         image = cv2.imread(path)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-        label = 0 if 'nothotdog' in str(path) else 1
+        label = 0.0 if 'nothotdog' in str(path) else 1.0
 
         if self.augmentations:
             augmented = self.augmentations(image=image)
