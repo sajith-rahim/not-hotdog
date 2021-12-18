@@ -14,7 +14,7 @@ from utils.utils import hotdog, nothotdog, print_banner,get_device
 
 
 if __name__ == "__main__":
-    task = 'val'
+    task = 'train'
 
     if task == 'train' or task == 'val':
         dir_path = os.path.dirname(os.path.realpath(__file__))
